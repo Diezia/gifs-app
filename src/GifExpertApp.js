@@ -7,10 +7,9 @@ export const GifExpertApp = () => {
    
     return (
         <div>
-            <h2>GifExpertApp</h2>
+            <h1 className="text-4xl mb-3 ml-3">GifExpertApp</h1>
             <AddCategory setCategories={ setCategories } categories={ categories } />
-            <hr />
-            <ol>
+            <>
                 {
                     categories.map( (elem) => (
                         <GifGrid
@@ -19,7 +18,7 @@ export const GifExpertApp = () => {
                         />
                     ))
                 }
-            </ol>
+            </>
             
         </div>
     )

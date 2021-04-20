@@ -4,21 +4,22 @@ import PropTypes from 'prop-types';
 const AddCategory = ({ setCategories, categories }) => {
     const [inputValue, setInputValue] = useState('');
     const handleInputChange = (e) => {
-        setInputValue( e.target.value )
+        setInputValue(e.target.value)
     }
     const handleSubmit = (e) => {
         e.preventDefault();
         setCategories([inputValue]);
         setInputValue('')
     }
-    
-    
+
+
     return (
-        <form onSubmit={ handleSubmit }>
+        <form onSubmit={handleSubmit}>
             <input
+                className="mb-3 ml-3 rounded-md border"
                 type="text"
                 value={inputValue}
-                onChange={ handleInputChange }
+                onChange={handleInputChange}
             />
         </form>
     )
